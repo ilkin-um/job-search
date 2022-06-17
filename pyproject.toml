@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "job-search"
+version = "0.1.0"
+description = "Job search app developed with FastAPI and PostgreSQL"
+authors = ["ilkin-um <ilkinum@gmail.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+fastapi = ">=0.78.0" 
+uvicorn = ">=0.17.6"
+SQLAlchemy  = ">=1.4.37"
+python-decouple = ">=3.6"
+
+[tool.poetry.dev-dependencies]
+pytest = ">=7.1.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
