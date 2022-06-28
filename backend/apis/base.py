@@ -8,5 +8,4 @@ api_router.include_router(route_general_pages.router, prefix="", tags=["general_
 
 api_router.include_router(route_users.router, prefix="/users", tags=["users"])
 
-
 api_router.include_router(route_jobs.router, prefix="/jobs", tags=["jobs"])

@@ -15,3 +15,21 @@ def test_create_job(client):
     assert response.status_code == 200
     assert response.json()["company"] == "Doesitmatter"
     assert response.json()["description"] == "python"
+
+
+def test_read_job(client):
+    data = {
+        "title": "Software Developer",
+        "company": "Doesitmatter",
+        "company_url": "www.doesitmatter.com",
+        "location": "Baku, Azerbaijan",
+        "description": "python",
+        "date_posted": "2022-06-28",
+    }
+
+    response = client.post("/jobs/create-job/", json.dumps(data))
+
+    response = client.get("/jobs/get/1/")
+    assert response.status_code == 200
+    assert response.json()["company"] == "Doesitmatter"
+    assert response.json()["description"] == "python"
