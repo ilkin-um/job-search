@@ -1,6 +1,11 @@
-from sqlalchemy import Column, Integer, String, Boolean, Date, ForeignKey
+from db.base_model import Base
+from sqlalchemy import Boolean
+from sqlalchemy import Column
+from sqlalchemy import Date
+from sqlalchemy import ForeignKey
+from sqlalchemy import Integer
+from sqlalchemy import String
 from sqlalchemy.orm import relationship
-from db.base import Base
 
 
 class Job(Base):
