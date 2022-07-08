@@ -10,6 +10,6 @@ def get_user(username: User, db: Session):
 
 def authenticate_user(username: str, password: str, db: Session):
     user = get_user(username=username, db=db)
-    if not user or not Hasher.verify_passwd(password, user.hashed_passwd):
+    if not user or not Hasher.verify_passwd(password, user.hashed_password):
         return False
     return user
