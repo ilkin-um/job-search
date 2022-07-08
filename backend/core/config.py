@@ -10,6 +10,9 @@ class Settings:
     DB_HOST: str = config("DB_HOST")
     DB_PORT: str = config("DB_PORT")
     DB_PASSWORD: str = config("DB_PASSWORD")
+    ACCESS_TOKEN_EXPIRE_MINUTES: int = 30
+    SECRET_KEY: str = config("SECRET_KEY")
+    ALGORITHM: str = "HS256"
 
 
 settings = Settings()
