@@ -23,7 +23,6 @@ def create_job(
     db: Session = Depends(get_db),
     current_user: User = Depends(get_current_user),
 ):
-    current_user = 1
     job = create_new_job(job=job, db=db, owner_id=current_user.id)
     return job
 
